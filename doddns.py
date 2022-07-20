@@ -29,7 +29,7 @@ def current_dns_entry(cfg: DictConfig) -> str:
 
     res_json = res.json()
     for record in res_json["domain_records"]:
-        if record["type"] == "A" and record["name"] == "home":
+        if record["type"] == "A" and record["name"] == f"{cfg.host_name}":
             return record
 
 

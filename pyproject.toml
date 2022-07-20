@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doddns"
+version = "0.1.0"
+dependencies = [
+  "requests",
+  "omegaconf",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = []
+
+[project.scripts]
+ do-ddns = "doddns:main"
